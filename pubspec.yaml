@@ -1,0 +1,14 @@
+name: noirs_flutter_frog_playground
+description: Practice playground for Dart Frog — routes, middleware, requests, and Dart backends.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.1
+
+dependencies:
+  equatable: ^2.1.0
+
+dev_dependencies:
+  test: ^1.25.0
+  very_good_analysis: ^11.0.0
