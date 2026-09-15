@@ -24,6 +24,8 @@
 [![Dart](assets/badges/dart.svg)](https://dart.dev/)
 [![Dart Frog](assets/badges/dart_frog.svg)](https://dart-frog.dev/)
 [![Equatable](assets/badges/equatable.svg)](https://pub.dev/packages/equatable)
+[![Json Serializable](assets/badges/json_serializable.svg)](https://pub.dev/packages/json_serializable)
+[![Build Runner](assets/badges/build_runner.svg)](https://pub.dev/packages/build_runner)
 [![Very Good Analysis](assets/badges/very_good.svg)](https://pub.dev/packages/very_good_analysis)
 
 </div>
@@ -58,6 +60,9 @@ Packages currently used in this playground. Update this table when `pubspec.yaml
 | Package | Reason |
 | --- | --- |
 | [equatable](https://pub.dev/packages/equatable) | Value equality for immutable models without hand-written `==` / `hashCode`. |
+| [json_annotation](https://pub.dev/packages/json_annotation) | Annotations for `fromJson` / `toJson` codegen. |
+| [json_serializable](https://pub.dev/packages/json_serializable) | JSON codegen from those annotations (`dev`). |
+| [build_runner](https://pub.dev/packages/build_runner) | Runs the code generators (`dev`). |
 | [very_good_analysis](https://pub.dev/packages/very_good_analysis) | Shared lint rules (same family as the Flutter playground). Dart Frog’s own template uses `dart_frog_lint`; this playground stays on Very Good Analysis. |
 | [test](https://pub.dev/packages/test) | Dart unit tests (`dev`). |
 
@@ -82,6 +87,8 @@ Every badge is a vertical dark → mid → light gradient (same contrast as Inst
 | `dart.svg` | `#01406B` → `#0175C2` → `#7BB7DF` | official Dart |
 | `dart_frog.svg` | `#194C2F` → `#2D8A56` → `#92C2A7` | frog green |
 | `equatable.svg` | `#3B345C` → `#6B5EA8` → `#B2ABD2` | purple |
+| `json_serializable.svg` | `#343A5C` → `#5E6AA8` → `#ABB2D2` | blue-violet |
+| `build_runner.svg` | `#194C4A` → `#2D8A86` → `#92C2C0` | teal |
 | `very_good.svg` | `#62184B` → `#B22C89` → `#D791C2` | Very Good Ventures |
 | `linkedin.svg` | `#06386B` → `#0A66C2` → `#80AFDF` | official LinkedIn |
 | `instagram.svg` | `#4C3469` → `#8B5FBF` → `#C3ACDE` | lilac |

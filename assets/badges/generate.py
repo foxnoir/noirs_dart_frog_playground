@@ -49,6 +49,8 @@ BADGES: list[tuple[str, str, str, str]] = [
     ("dart", "Dart", "#0175C2", "official Dart"),
     ("dart_frog", "Dart Frog", "#2D8A56", "frog green (no published badge color)"),
     ("equatable", "Equatable", "#6B5EA8", "purple (no published badge color)"),
+    ("json_serializable", "Json Serializable", "#5E6AA8", "blue-violet (no published badge color)"),
+    ("build_runner", "Build Runner", "#2D8A86", "teal (no published badge color)"),
     ("riverpod", "Riverpod", "#8B5FBF", "app purple (no published badge color)"),
     ("riverpod_lint", "Riverpod Lint", "#5E6AA8", "blue-violet (no published badge color)"),
     ("freezed", "Freezed", "#4A8C6F", "green (no published badge color)"),

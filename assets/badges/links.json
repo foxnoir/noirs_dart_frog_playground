@@ -18,6 +18,18 @@
     "href": "https://pub.dev/packages/equatable"
   },
   {
+    "image": "json-serializable",
+    "file": "json_serializable.svg",
+    "url": "json-serializable-url",
+    "href": "https://pub.dev/packages/json_serializable"
+  },
+  {
+    "image": "build-runner",
+    "file": "build_runner.svg",
+    "url": "build-runner-url",
+    "href": "https://pub.dev/packages/build_runner"
+  },
+  {
     "image": "flutter",
     "file": "flutter.svg",
     "url": "flutter-url",
