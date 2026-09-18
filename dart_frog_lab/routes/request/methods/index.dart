@@ -2,6 +2,13 @@ import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
 
+// Postman (http://localhost:8080/request/methods):
+// GET    → 200 JSON {"Request method": "HttpMethod.get"}
+// POST   → 201 Created
+// PUT    → 200 text Request method: HttpMethod.put
+// DELETE → 204 No Content
+// PATCH  → 405 Invalid Request
+
 Response onRequest(RequestContext context) {
   return switch (context.request.method) {
     HttpMethod.get => _handleGet(context),

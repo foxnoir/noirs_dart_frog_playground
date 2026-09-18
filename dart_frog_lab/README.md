@@ -32,6 +32,12 @@
   <ol>
     <li><a href="#about">About</a></li>
     <li>
+      <a href="#routes">Routes</a>
+      <ul>
+        <li><a href="#postman">Postman</a></li>
+      </ul>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#hot-reload-required-pin">Hot reload (required pin)</a></li>
@@ -47,11 +53,49 @@
 
 ## About
 
-This project is the first **Dart Frog** practice project in [Noir's Dart Frog Playground](../README.md). It started from `dart_frog create` and is still close to the default template — a trainee app to try the framework a bit before the later labs.
+This project is the first **Dart Frog** practice project in [Noir's Dart Frog Playground](../README.md). It started from `dart_frog create` — a trainee app to try **routes**, **HTTP methods**, **headers**, and **query parameters**.
 
 [![Dart Frog](../assets/badges/dart_frog.svg)](https://dart-frog.dev/)
 
 `dart_frog dev` serves [http://localhost:8080](http://localhost:8080).
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+---
+
+## Routes
+
+Folders under `routes/` become path segments. `index.dart` is that folder’s URL.
+
+| File | URL |
+| --- | --- |
+| [`routes/index.dart`](routes/index.dart) | `/` |
+| [`routes/hello.dart`](routes/hello.dart) | `/hello` |
+| [`routes/sample/path/index.dart`](routes/sample/path/index.dart) | `/sample/path` |
+| [`routes/request/methods/index.dart`](routes/request/methods/index.dart) | `/request/methods` |
+| [`routes/request/headers/index.dart`](routes/request/headers/index.dart) | `/request/headers` |
+| [`routes/request/query_parameters/index.dart`](routes/request/query_parameters/index.dart) | `/request/query_parameters` |
+
+**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. Each handler file has the Postman calls as comments.
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+### Postman
+
+Base URL: `http://localhost:8080`. Start `dart_frog dev` first.
+
+| Method | URL | Expect |
+| --- | --- | --- |
+| GET | `/` | `Welcome to Dart Frog!` |
+| GET | `/hello` | `Hello` |
+| GET | `/sample/path` | `This is a new route!` |
+| GET | `/request/methods` | 200 JSON `{"Request method": "HttpMethod.get"}` |
+| POST | `/request/methods` | 201 Created |
+| PUT | `/request/methods` | 200 `Request method: HttpMethod.put` |
+| DELETE | `/request/methods` | 204 No Content |
+| PATCH | `/request/methods` | 405 `Invalid Request` |
+| GET | `/request/headers` | JSON `request_headers` (add a header in the Headers tab to see it) |
+| GET | `/request/query_parameters?name=ada&limit=10` | JSON `queryParameters` (`name`, `limit` as strings) |
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -117,7 +161,7 @@ Restart `dart_frog dev`. After that, changing a route should log the hotreload l
 
 ## Testing
 
-`test/` mirrors `routes/`. A test file belongs to one source file (`index.dart` → `index_test.dart`).
+`test/` mirrors `routes/` (`methods/index.dart` → `test/routes/request/methods/index_test.dart`).
 
 ```
 cd dart_frog_lab
@@ -139,6 +183,7 @@ Changes to this playground: [noirs_dart_frog_playground](https://github.com/foxn
 ## Sources
 
 - [Dart Frog](https://dart-frog.dev/)
+- [Routes](https://dart-frog.dev/basics/routes/)
 - [dart_frog](https://pub.dev/packages/dart_frog)
 - [dart_frog_lint](https://pub.dev/packages/dart_frog_lint)
 - [very_good_analysis](https://pub.dev/packages/very_good_analysis)

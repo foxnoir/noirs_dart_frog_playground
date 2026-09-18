@@ -73,7 +73,7 @@ Packages currently used in the playground apps. Not every app uses every row. Up
   <a href="dart_frog_lab/">Dart Frog Lab »</a>
 </h3>
 
-Practice project for **trying Dart Frog**. First scratch app from `dart_frog create`, still close to the default template. Hot reload is pinned to `hotreloader` 4.3.0 — see the lab README.
+Practice project for **trying Dart Frog**. Routes, HTTP methods, headers, and query parameters. Hot reload is pinned to `hotreloader` 4.3.0 — see the lab README.
 
 [README »](dart_frog_lab/README.md)
 
