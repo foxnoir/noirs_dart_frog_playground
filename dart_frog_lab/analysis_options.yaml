@@ -1,1 +1,28 @@
-include: package:dart_frog_lint/recommended.yaml
+include: package:very_good_analysis/analysis_options.6.0.0.yaml
+
+linter:
+  rules:
+    always_put_required_named_parameters_first: false
+    always_use_package_imports: false
+    avoid_print: false
+    avoid_redundant_argument_values: false
+    cascade_invocations: false
+    constant_identifier_names: false
+    depend_on_referenced_packages: false
+    file_names: false
+    lines_longer_than_80_chars: false
+    no_leading_underscores_for_local_identifiers: false
+    non_constant_identifier_names: false
+    omit_local_variable_types: false
+    one_member_abstracts: false
+    public_member_api_docs: false
+
+analyzer:
+  errors:
+    public_member_api_docs: ignore
+    sort_pub_dependencies: ignore
+
+  exclude:
+    - build/**
+    - .dart_frog/**
+    - "**/*.g.dart"

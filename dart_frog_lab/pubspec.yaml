@@ -1,5 +1,5 @@
 name: dart_frog_lab
-description: A new Dart Frog application
+description: Practice app for trying Dart Frog — first scratch project from dart_frog create.
 version: 1.0.0+1
 publish_to: none
 
@@ -13,3 +13,4 @@ dev_dependencies:
   dart_frog_lint: ^0.1.0
   mocktail: ^1.0.0
   test: ^1.0.0
+  very_good_analysis: ^6.0.0

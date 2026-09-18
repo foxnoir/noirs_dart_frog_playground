@@ -1,0 +1,3 @@
+dependency_overrides:
+  # https://github.com/vegardit/dart-hotreloader/issues/28
+  hotreloader: 4.3.0

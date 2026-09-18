@@ -23,6 +23,7 @@
 
 [![Dart](assets/badges/dart.svg)](https://dart.dev/)
 [![Dart Frog](assets/badges/dart_frog.svg)](https://dart-frog.dev/)
+[![Very Good Analysis](assets/badges/very_good.svg)](https://pub.dev/packages/very_good_analysis)
 
 </div>
 
@@ -30,6 +31,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-this-repository">About this repository</a></li>
+    <li><a href="#packages">Packages</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#badges">Badges</a></li>
   </ol>
@@ -49,13 +51,29 @@ The root README stays short: a link and a rough summary per project. Getting sta
 
 ---
 
+## Packages
+
+Packages currently used in the playground apps. Not every app uses every row. Update this table when a `pubspec.yaml` changes.
+
+| Package | Reason |
+| --- | --- |
+| [dart_frog](https://pub.dev/packages/dart_frog) | Backend framework. Handlers live in `routes/`. |
+| [dart_frog_lint](https://pub.dev/packages/dart_frog_lint) | Dart Frog lint set from `dart_frog create`. |
+| [very_good_analysis](https://pub.dev/packages/very_good_analysis) | Shared lint rules. |
+| [mocktail](https://pub.dev/packages/mocktail) | `RequestContext` mocks in route tests. |
+| [test](https://pub.dev/packages/test) | Route tests (`dev`). |
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+---
+
 ## Projects
 
 <h3>
   <a href="dart_frog_lab/">Dart Frog Lab »</a>
 </h3>
 
-First scratch project from `dart_frog create`. Still the default template.
+Practice project for **trying Dart Frog**. First scratch app from `dart_frog create`, still close to the default template. Hot reload is pinned to `hotreloader` 4.3.0 — see the lab README.
 
 [README »](dart_frog_lab/README.md)
 
@@ -79,6 +97,7 @@ Every badge is a vertical dark → mid → light gradient (same contrast as Inst
 | --- | --- | --- |
 | `dart.svg` | `#01406B` → `#0175C2` → `#7BB7DF` | official Dart |
 | `dart_frog.svg` | `#194C2F` → `#2D8A56` → `#92C2A7` | frog green |
+| `very_good.svg` | `#62184B` → `#B22C89` → `#D791C2` | Very Good Ventures |
 | `linkedin.svg` | `#06386B` → `#0A66C2` → `#80AFDF` | official LinkedIn |
 | `instagram.svg` | `#4C3469` → `#8B5FBF` → `#C3ACDE` | lilac |
 | `x.svg` | `#456576` → `#7EB8D6` → `#BCDAEA` | pastel light blue |
