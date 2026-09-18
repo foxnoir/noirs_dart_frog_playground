@@ -53,7 +53,7 @@
 
 ## About
 
-This project is the first **Dart Frog** practice project in [Noir's Dart Frog Playground](../README.md). It started from `dart_frog create` — a trainee app to try **routes**, **HTTP methods**, **headers**, and **query parameters**.
+This project is the first **Dart Frog** practice project in [Noir's Dart Frog Playground](../README.md). It started from `dart_frog create` — a trainee app to try **routes**, **HTTP methods**, **headers**, **query parameters**, and the **request body**.
 
 [![Dart Frog](../assets/badges/dart_frog.svg)](https://dart-frog.dev/)
 
@@ -75,8 +75,9 @@ Folders under `routes/` become path segments. `index.dart` is that folder’s UR
 | [`routes/request/methods/index.dart`](routes/request/methods/index.dart) | `/request/methods` |
 | [`routes/request/headers/index.dart`](routes/request/headers/index.dart) | `/request/headers` |
 | [`routes/request/query_parameters/index.dart`](routes/request/query_parameters/index.dart) | `/request/query_parameters` |
+| [`routes/request/body/string/index.dart`](routes/request/body/string/index.dart) | `/request/body/string` |
 
-**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. Each handler file has the Postman calls as comments.
+**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. **Body (string)** is POST-only: `await context.request.body()` then the runtime type. Each handler file has the Postman calls as comments.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -96,6 +97,8 @@ Base URL: `http://localhost:8080`. Start `dart_frog dev` first.
 | PATCH | `/request/methods` | 405 `Invalid Request` |
 | GET | `/request/headers` | JSON `request_headers` (add a header in the Headers tab to see it) |
 | GET | `/request/query_parameters?name=ada&limit=10` | JSON `queryParameters` (`name`, `limit` as strings) |
+| POST | `/request/body/string` | Body tab → raw → Text → `hello` → `bodyType: String, content: hello` |
+| GET | `/request/body/string` | 405 |
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
