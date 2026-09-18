@@ -77,8 +77,9 @@ Folders under `routes/` become path segments. `index.dart` is that folder’s UR
 | [`routes/request/query_parameters/index.dart`](routes/request/query_parameters/index.dart) | `/request/query_parameters` |
 | [`routes/request/body/string/index.dart`](routes/request/body/string/index.dart) | `/request/body/string` |
 | [`routes/request/body/json/index.dart`](routes/request/body/json/index.dart) | `/request/body/json` |
+| [`routes/request/body/form/urlencoded.dart`](routes/request/body/form/urlencoded.dart) | `/request/body/form/urlencoded` |
 
-**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. **Body (string)** is POST-only: `await context.request.body()`. **Body (json)** is POST-only: `await context.request.json()`. Each handler file has the Postman calls as comments.
+**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. **Body (string)** is POST-only: `await context.request.body()`. **Body (json)** is POST-only: `await context.request.json()`. **Body (form urlencoded)** is POST-only: `await context.request.formData()`. Each handler file has the Postman calls as comments.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -102,6 +103,8 @@ Base URL: `http://localhost:8080`. Start `dart_frog dev` first.
 | GET | `/request/body/string` | 405 |
 | POST | `/request/body/json` | Body tab → raw → JSON → paste from `routes/request/body/json/index.dart` |
 | GET | `/request/body/json` | 405 |
+| POST | `/request/body/form/urlencoded` | Body tab → **x-www-form-urlencoded** → `prize=gold`, `candidate=ada` |
+| GET | `/request/body/form/urlencoded` | 405 |
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
