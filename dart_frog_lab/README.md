@@ -76,8 +76,9 @@ Folders under `routes/` become path segments. `index.dart` is that folder’s UR
 | [`routes/request/headers/index.dart`](routes/request/headers/index.dart) | `/request/headers` |
 | [`routes/request/query_parameters/index.dart`](routes/request/query_parameters/index.dart) | `/request/query_parameters` |
 | [`routes/request/body/string/index.dart`](routes/request/body/string/index.dart) | `/request/body/string` |
+| [`routes/request/body/json/index.dart`](routes/request/body/json/index.dart) | `/request/body/json` |
 
-**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. **Body (string)** is POST-only: `await context.request.body()` then the runtime type. Each handler file has the Postman calls as comments.
+**Methods** switches GET / POST / PUT / DELETE (anything else is 405). **Headers** echoes `context.request.headers` as JSON. **Query parameters** echoes `uri.queryParameters` as JSON. **Body (string)** is POST-only: `await context.request.body()`. **Body (json)** is POST-only: `await context.request.json()`. Each handler file has the Postman calls as comments.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -99,6 +100,8 @@ Base URL: `http://localhost:8080`. Start `dart_frog dev` first.
 | GET | `/request/query_parameters?name=ada&limit=10` | JSON `queryParameters` (`name`, `limit` as strings) |
 | POST | `/request/body/string` | Body tab → raw → Text → `hello` → `bodyType: String, content: hello` |
 | GET | `/request/body/string` | 405 |
+| POST | `/request/body/json` | Body tab → raw → JSON → paste from `routes/request/body/json/index.dart` |
+| GET | `/request/body/json` | 405 |
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
